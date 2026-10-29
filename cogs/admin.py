@@ -71,7 +71,7 @@ class admin(commands.Cog):
             await interaction.response.send_message(f":no_entry_sign:｜{langMan.getString('noAdminPrivileges', guildID=guildID)}")
             return
 
-        setCoinName(new_symbol, guildID)
+        setCoinSymbol(new_symbol, guildID)
         await interaction.response.send_message(f":white_check_mark:｜{langMan.getString('newCoinNameSuccess', guildID=guildID, extra1=new_symbol)}")
 
     @app_commands.command(name="set_daily_range", description="Sets a new range for the daily rewards on this guild.")
